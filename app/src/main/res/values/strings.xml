@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">pizzeria</string>
+    <string name="order_pizza">Order Pizza</string>
+    <string name="build_your_own">Build Your Own</string>
+    <string name="checkout">Checkout</string>
+    <string name="orders_management">Orders Management</string>
 </resources>
