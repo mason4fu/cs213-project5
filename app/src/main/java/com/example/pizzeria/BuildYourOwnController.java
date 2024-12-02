@@ -1,3 +1,4 @@
+/*
 package com.example.pizzeria;
 
 import javafx.fxml.FXML;
@@ -12,10 +13,12 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Objects;
 
+*/
 /**
  * Controller for the "Build Your Own Pizza" screen.
  * Manages user interactions, updates the UI, and handles logic for creating a custom pizza.
- */
+ *//*
+
 public class BuildYourOwnController {
     private PizzeriaController mainController; // Reference to the main controller
     private OrdersController ordersController; // Reference to the orders controller
@@ -57,9 +60,11 @@ public class BuildYourOwnController {
     private ObservableList<Topping> availableToppings; // List of available toppings
     private ObservableList<Topping> selectedToppings; // List of selected toppings
 
-    /**
+    */
+/**
      * Sets the main controller and other dependencies.
-     */
+     *//*
+
     public void setMainController(PizzeriaController mainController, OrdersController ordersController, CheckoutController checkoutController, Stage primaryStage, Scene primaryScene) {
         this.mainController = mainController;
         this.ordersController = ordersController;
@@ -68,9 +73,11 @@ public class BuildYourOwnController {
         this.primaryScene = primaryScene;
     }
 
-    /**
+    */
+/**
      * Initializes the controller and sets up default values and bindings.
-     */
+     *//*
+
     @FXML
     public void initialize() {
         // Create a default Chicago-style Build Your Own pizza
@@ -97,9 +104,11 @@ public class BuildYourOwnController {
         updateSubtotal(); // Initialize the subtotal display
     }
 
-    /**
+    */
+/**
      * Updates the crust and pizza factory based on the selected crust type.
-     */
+     *//*
+
     private void updateCrustAndFactory() {
         PizzaFactory factory;
         if (chicagoStyleRadioButton.isSelected()) {
@@ -119,9 +128,11 @@ public class BuildYourOwnController {
         crustImageView.setPreserveRatio(false);
     }
 
-    /**
+    */
+/**
      * Updates the subtotal based on the selected size and toppings.
-     */
+     *//*
+
     private void updateSubtotal() {
         Size selectedSize = sizeComboBox.getValue(); // Get the selected size from the ComboBox
 
@@ -138,9 +149,11 @@ public class BuildYourOwnController {
                 : String.format("Subtotal: $%.2f", subtotal));
     }
 
-    /**
+    */
+/**
      * Adds a selected topping to the pizza.
-     */
+     *//*
+
     @FXML
     public void onAddTopping() {
         Topping selectedTopping = availableToppingsListView.getSelectionModel().getSelectedItem();
@@ -152,9 +165,11 @@ public class BuildYourOwnController {
         }
     }
 
-    /**
+    */
+/**
      * Removes a selected topping from the pizza.
-     */
+     *//*
+
     @FXML
     public void onRemoveTopping() {
         Topping selectedTopping = selectedToppingsListView.getSelectionModel().getSelectedItem();
@@ -164,9 +179,11 @@ public class BuildYourOwnController {
         }
     }
 
-    /**
+    */
+/**
      * Adds the custom pizza to the order.
-     */
+     *//*
+
     @FXML
     public void onAddToOrder() {
         if (pizza.getSize() == null) {
@@ -186,9 +203,11 @@ public class BuildYourOwnController {
         resetSelections();
     }
 
-    /**
+    */
+/**
      * Resets selections to default state.
-     */
+     *//*
+
     private void resetSelections() {
         sizeComboBox.getSelectionModel().clearSelection(); // Clear ComboBox selection
         crustGroup.selectToggle(null);
@@ -197,9 +216,11 @@ public class BuildYourOwnController {
         updateSubtotal();
     }
 
-    /**
+    */
+/**
      * Returns to the main view.
-     */
+     *//*
+
     @FXML
     public void displayMain() {
         if (mainController != null) {
@@ -209,9 +230,11 @@ public class BuildYourOwnController {
         }
     }
 
-    /**
+    */
+/**
      * Displays an error alert.
-     */
+     *//*
+
     private void showAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -220,9 +243,11 @@ public class BuildYourOwnController {
         alert.showAndWait();
     }
 
-    /**
+    */
+/**
      * Displays an informational alert.
-     */
+     *//*
+
     private void showInfo(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
@@ -231,3 +256,4 @@ public class BuildYourOwnController {
         alert.showAndWait();
     }
 }
+*/

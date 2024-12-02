@@ -1,3 +1,4 @@
+/*
 package com.example.pizzeria;
 
 import javafx.fxml.FXML;
@@ -13,9 +14,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+*/
 /**
  * Controller for the main screen.
- */
+ *//*
+
 public class PizzeriaController {
     private Stage primaryStage;
     private Scene primaryScene;
@@ -42,20 +45,24 @@ public class PizzeriaController {
     @FXML
     private Button viewOrdersButton;
 
-    /**
+    */
+/**
      *Set the primary stage.
      *
      * @param stage
      * @param scene
-     */
+     *//*
+
     public void setPrimaryStage(Stage stage, Scene scene) {
         this.primaryStage = stage;
         this.primaryScene = scene;
     }
 
-    /**
+    */
+/**
      * Initialize.
-     */
+     *//*
+
     @FXML
     public void initialize() {
         preloadControllers();
@@ -66,12 +73,14 @@ public class PizzeriaController {
         viewOrdersButton.setGraphic(createImageView("/images/orders.png"));
     }
 
-    /**
+    */
+/**
      *Create image view.
      *
      * @param imagePath
      * @return
-     */
+     *//*
+
     private ImageView createImageView(String imagePath) {
         ImageView imageView = new ImageView(new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath))));
         imageView.setFitHeight(130);
@@ -80,9 +89,11 @@ public class PizzeriaController {
         return imageView;
     }
 
-    /**
+    */
+/**
      * Preload controllers.
-     */
+     *//*
+
     private void preloadControllers() {
         ordersScene = loadView("Orders-view.fxml", controller -> {
             ordersController = (OrdersController) controller;
@@ -105,13 +116,15 @@ public class PizzeriaController {
         });
     }
 
-    /**
+    */
+/**
      *Load view.
      *
      * @param fxmlFile
      * @param initializer
      * @return
-     */
+     *//*
+
     private Scene loadView(String fxmlFile, ControllerInitializer initializer) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -151,12 +164,14 @@ public class PizzeriaController {
         setSceneAndTitle(primaryScene, "PizzeriaHub");
     }
 
-    /**
+    */
+/**
      * Set scene and title.
      *
      * @param scene
      * @param title
-     */
+     *//*
+
     private void setSceneAndTitle(Scene scene, String title) {
         if (primaryStage == null) {
             showAlert("ERROR", "Primary Stage Not Initialized", "Please ensure primary stage is set.");
@@ -167,13 +182,15 @@ public class PizzeriaController {
         primaryStage.show();
     }
 
-    /**
+    */
+/**
      * Show alert.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -186,4 +203,4 @@ public class PizzeriaController {
     private interface ControllerInitializer {
         void initialize(Object controller);
     }
-}
+}*/

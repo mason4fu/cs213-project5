@@ -1,3 +1,4 @@
+/*
 package com.example.pizzeria;
 
 import javafx.beans.property.SimpleStringProperty;
@@ -37,10 +38,12 @@ public class MakePizzaController {
     @FXML
     private ImageView pizzaImages;
 
-    /**
+    */
+/**
      * Get the reference to the MainController object.
      * We can call any public method defined in the controller through the reference.
-     */
+     *//*
+
     public void setMainController(PizzeriaController mainController, OrdersController ordersController, CheckoutController checkoutController, Stage primaryStage, Scene primaryScene) {
         this.mainController = mainController;
         this.ordersController = ordersController;
@@ -74,13 +77,15 @@ public class MakePizzaController {
         }
     }
 
-    /**
+    */
+/**
      * Show alert.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -89,13 +94,15 @@ public class MakePizzaController {
         alert.showAndWait();
     }
 
-    /**
+    */
+/**
      * Show information.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showInfo(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
@@ -104,9 +111,11 @@ public class MakePizzaController {
         alert.showAndWait();
     }
 
-    /**
+    */
+/**
      * Enables the schedule button when required fields are filled
-     */
+     *//*
+
     private void updateButtonState() {
         boolean fieldsNotFilled = TypeGroup.getSelectedToggle() == null ||
                 NYOrChicagoGroup.getSelectedToggle() == null ||
@@ -171,9 +180,11 @@ public class MakePizzaController {
         updateToppings();
     }
 
-    /**
+    */
+/**
      * Update toppings.
-     */
+     *//*
+
     private void updateToppings() {
         if(TypeGroup.getSelectedToggle() == null){
             ToppingsTable.getItems().clear();
@@ -208,9 +219,11 @@ public class MakePizzaController {
         ToppingsTable.setItems(FXCollections.observableArrayList(pizzaToAdd.getToppings()));
     }
 
-    /**
+    */
+/**
      * Update images displayed.
-     */
+     *//*
+
     private void updateImages() {
         if (TypeGroup.getSelectedToggle() != null && NYOrChicagoGroup.getSelectedToggle() != null){
             fullImageSetter();
@@ -223,9 +236,11 @@ public class MakePizzaController {
         }
     }
 
-    /**
+    */
+/**
      * Set images based on style.
-     */
+     *//*
+
     private void styleImageSetter(){
         String style = ((RadioButton) NYOrChicagoGroup.getSelectedToggle()).getText().toLowerCase().trim();
         if(style.equalsIgnoreCase("New York")){
@@ -238,9 +253,11 @@ public class MakePizzaController {
         }
     }
 
-    /**
+    */
+/**
      * Set images based on type.
-     */
+     *//*
+
     private void typeImageSetter(){
         String type = ((RadioButton) TypeGroup.getSelectedToggle()).getText().toLowerCase().trim();
         if(type.equalsIgnoreCase("BBQ Chicken")) {
@@ -255,9 +272,11 @@ public class MakePizzaController {
         }
     }
 
-    /**
+    */
+/**
      * Full image setter.
-     */
+     *//*
+
     private void fullImageSetter(){
         String style = ((RadioButton) NYOrChicagoGroup.getSelectedToggle()).getText().toLowerCase().trim();
         if(style.equalsIgnoreCase("New York")){
@@ -285,9 +304,11 @@ public class MakePizzaController {
         ToppingCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().toString()));
     }
 
-    /**
+    */
+/**
      * Check price.
-     */
+     *//*
+
     private void priceCheck() {
         String type = ((RadioButton) TypeGroup.getSelectedToggle()).getText().trim();
         String style = ((RadioButton) NYOrChicagoGroup.getSelectedToggle()).getText().trim();
@@ -327,12 +348,14 @@ public class MakePizzaController {
                 size, style, type, pizzaToAdd.price()));
     }
 
-    /**
+    */
+/**
      * Convert string to size.
      *
      * @param size
      * @return
-     */
+     *//*
+
     private Size stringToSize(String size) {
         switch (size.toLowerCase()) {
             case "large" -> {
@@ -348,3 +371,4 @@ public class MakePizzaController {
     }
 
 }
+*/

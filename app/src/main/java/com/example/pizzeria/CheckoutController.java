@@ -1,3 +1,4 @@
+/*
 package com.example.pizzeria;
 
 import javafx.collections.FXCollections;
@@ -7,9 +8,11 @@ import javafx.scene.control.*;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+*/
 /**
  * Controller for the Checkout screen.
- */
+ *//*
+
 public class CheckoutController {
     private PizzeriaController mainController;  // Reference to the main controller
     private OrdersController ordersController; // Reference to OrdersController for accessing the current order
@@ -31,14 +34,16 @@ public class CheckoutController {
     @FXML
     private Button checkoutButton;
 
-    /**
+    */
+/**
      * Set main controller.
      *
      * @param mainController
      * @param ordersController
      * @param primaryStage
      * @param primaryScene
-     */
+     *//*
+
     public void setMainController(PizzeriaController mainController, OrdersController ordersController, Stage primaryStage, Scene primaryScene) {
         this.mainController = mainController;
         this.ordersController = ordersController;
@@ -47,17 +52,21 @@ public class CheckoutController {
         updateOrderDisplay(); // Initialize display upon setting controllers and stage
     }
 
-    /**
+    */
+/**
      * Initialize.
-     */
+     *//*
+
     @FXML
     public void initialize() {
         pizzasListView.setItems(FXCollections.observableArrayList());
     }
 
-    /**
+    */
+/**
      * Update order display.
-     */
+     *//*
+
     public void updateOrderDisplay() {
         if (ordersController == null) {
             showAlert("ERROR", "OrdersController not initialized", "Unable to update order display.");
@@ -83,9 +92,11 @@ public class CheckoutController {
         totalLabel.setText(String.format("Total: $%.2f", total));
     }
 
-    /**
+    */
+/**
      * Remove selected pizza.
-     */
+     *//*
+
     @FXML
     public void onRemovePizza() {
         int selectedIndex = pizzasListView.getSelectionModel().getSelectedIndex();
@@ -103,9 +114,11 @@ public class CheckoutController {
         }
     }
 
-    /**
+    */
+/**
      * Manage checkout button click.
-     */
+     *//*
+
     @FXML
     public void onCheckout() {
         if (ordersController == null) {
@@ -127,9 +140,11 @@ public class CheckoutController {
         });
     }
 
-    /**
+    */
+/**
      * Returns to the main view.
-     */
+     *//*
+
     @FXML
     public void displayMain() {
         if (mainController != null) {
@@ -139,13 +154,15 @@ public class CheckoutController {
         }
     }
 
-    /**
+    */
+/**
      * Show alert.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -154,13 +171,15 @@ public class CheckoutController {
         alert.showAndWait();
     }
 
-    /**
+    */
+/**
      * Show information.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showInfo(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
@@ -168,4 +187,4 @@ public class CheckoutController {
         alert.setContentText(content);
         alert.showAndWait();
     }
-}
+}*/

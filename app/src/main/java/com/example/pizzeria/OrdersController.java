@@ -1,3 +1,4 @@
+/*
 package com.example.pizzeria;
 
 import javafx.collections.FXCollections;
@@ -15,10 +16,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * Controller for managing orders in the Pizzeria application.
  * Displays and manages a list of pizzas in the current and completed orders.
- */
+ *//*
+
 public class OrdersController {
     private PizzeriaController mainController;  // Reference to the main controller
     private Stage primaryStage;
@@ -40,13 +43,15 @@ public class OrdersController {
     @FXML
     private Button printButton;
 
-    /**
+    */
+/**
      * Set main controller.
      *
      * @param mainController
      * @param primaryStage
      * @param primaryScene
-     */
+     *//*
+
     public void setMainController(PizzeriaController mainController, Stage primaryStage, Scene primaryScene) {
         this.mainController = mainController;
         this.primaryStage = primaryStage;
@@ -73,11 +78,13 @@ public class OrdersController {
         updateCompletedOrdersDisplay();
     }
 
-    /**
+    */
+/**
      * Adds a pizza to the current order and updates the display.
      *
      * @param pizza the pizza to add
-     */
+     *//*
+
     public void addPizzaToOrder(Pizza pizza) {
         if (currentOrder == null) {
             currentOrder = new Order();
@@ -86,10 +93,12 @@ public class OrdersController {
         updateOrderDisplay();
     }
 
-    /**
+    */
+/**
      * Completes the current order, adds it to the list of completed orders,
      * and starts a new order.
-     */
+     *//*
+
     public void completeOrder() {
         if (currentOrder != null) {
             completedOrders.add(currentOrder);
@@ -99,9 +108,11 @@ public class OrdersController {
         updateCompletedOrdersDisplay();
     }
 
-    /**
+    */
+/**
      * Updates the display of pizzas and total cost in the current order.
-     */
+     *//*
+
     public void updateOrderDisplay() {
         ObservableList<String> pizzaDescriptions = FXCollections.observableArrayList();
         double total = 0;
@@ -116,18 +127,22 @@ public class OrdersController {
         totalLabel.setText(String.format("Total: $%.2f", total));
     }
 
-    /**
+    */
+/**
      * Retrieves the pizzas in the current order.
      *
      * @return list of pizzas in the current order
-     */
+     *//*
+
     public List<Pizza> getCurrentOrder() {
         return currentOrder.getPizzas();
     }
 
-    /**
+    */
+/**
      * Updates the display of completed orders.
-     */
+     *//*
+
     public void updateCompletedOrdersDisplay() {
         ObservableList<String> orderDescriptions = FXCollections.observableArrayList();
         for (Order order : completedOrders) {
@@ -136,9 +151,11 @@ public class OrdersController {
         completedOrdersListView.setItems(orderDescriptions);
     }
 
-    /**
+    */
+/**
      * Removes the selected order from the completed orders list.
-     */
+     *//*
+
     @FXML
     public void onRemoveSelectedOrder() {
         int selectedIndex = completedOrdersListView.getSelectionModel().getSelectedIndex();
@@ -150,9 +167,11 @@ public class OrdersController {
         }
     }
 
-    /**
+    */
+/**
      * Prints all completed orders to a text file. Stored in root folder.
-     */
+     *//*
+
     @FXML
     public void onPrintOrders() {
         if (completedOrders.isEmpty()) {
@@ -185,13 +204,15 @@ public class OrdersController {
         }
     }
 
-    /**
+    */
+/**
      * Show alert.
      *
      * @param title
      * @param header
      * @param content
-     */
+     *//*
+
     private void showAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
@@ -199,4 +220,4 @@ public class OrdersController {
         alert.setContentText(content);
         alert.showAndWait();
     }
-}
+}*/
