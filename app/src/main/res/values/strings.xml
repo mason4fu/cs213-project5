@@ -5,4 +5,18 @@
     <string name="checkout">Checkout</string>
     <string name="orders_management">Orders Management</string>
     <string name="back">Back</string>
+    <string name="style">Style</string>
+    <string name="new_york">New York</string>
+    <string name="chicago">Chicago</string>
+    <string name="preview_pizza">Preview of chosen pizza</string>
+    <string name="type">Type</string>
+    <string name="deluxe">Deluxe</string>
+    <string name="meatzza">Meatzza</string>
+    <string name="bbq_chicken">BBQ Chicken</string>
+    <string name="size">Size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="finish_choosing_pizza_to_see_pricing">Finish choosing pizza to see pricing</string>
+    <string name="add_to_order">Add to order</string>
 </resources>

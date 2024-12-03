@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
         */
 
-        Toast.makeText(this, "onCreate()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "onCreate()", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      */
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
      */
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
     }
 
     public void openStyle(View view){

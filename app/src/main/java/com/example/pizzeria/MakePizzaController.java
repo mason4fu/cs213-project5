@@ -261,11 +261,11 @@ public class MakePizzaController {
     private void typeImageSetter(){
         String type = ((RadioButton) TypeGroup.getSelectedToggle()).getText().toLowerCase().trim();
         if(type.equalsIgnoreCase("BBQ Chicken")) {
-            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/NYBBQChicken.jpg"))));
+            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/nybbqchicken.jpg"))));
         } else if(type.equalsIgnoreCase("Deluxe")) {
-            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/NYDeluxe.jpg"))));
+            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/nydeluxe.jpg"))));
         } else if (type.equalsIgnoreCase("Meatzza")) {
-            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/NYMeatzza.jpg"))));
+            pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/nymeatzza.jpg"))));
         } else {
             showAlert("ERROR", "Invalid Type of Pizza", "Image display failure, this should not appear.");
             pizzaImages.setImage(null);
@@ -284,11 +284,11 @@ public class MakePizzaController {
         } else if (style.equalsIgnoreCase("Chicago")) {
             String type = ((RadioButton) TypeGroup.getSelectedToggle()).getText().toLowerCase().trim();
             if(type.equalsIgnoreCase("BBQ Chicken")) {
-                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/ChicagoBBQChicken.jpg"))));
+                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/chicagobbqchicken.jpg"))));
             } else if(type.equalsIgnoreCase("Deluxe")) {
-                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/ChicagoDeluxe.jpg"))));
+                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/chicagodeluxe.jpg"))));
             } else if (type.equalsIgnoreCase("Meatzza")) {
-                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/ChicagoMeatzza.jpg"))));
+                pizzaImages.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/chicagomeatzza.jpg"))));
             } else {
                 showAlert("ERROR", "Invalid Type of Pizza", "Image display failure, this should not appear.");
                 pizzaImages.setImage(null);
