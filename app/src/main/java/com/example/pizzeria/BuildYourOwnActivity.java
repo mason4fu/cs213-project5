@@ -25,7 +25,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
     private Spinner sizeSpinner;
     private Button chicagoStyleButton, nyStyleButton, returnToHomeButton;
-    private ImageView crustImageView;
+    private ImageView crustImageView, toppingImageView;
     private RecyclerView toppingsRecyclerView;
     private ListView selectedToppingsListView;
     private TextView subtotalLabel;
@@ -51,6 +51,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         chicagoStyleButton = findViewById(R.id.chicagoStyleButton);
         nyStyleButton = findViewById(R.id.nyStyleButton);
         crustImageView = findViewById(R.id.crustImageView);
+        toppingImageView = findViewById(R.id.toppingImageView);
         toppingsRecyclerView = findViewById(R.id.toppingsRecyclerView);
         selectedToppingsListView = findViewById(R.id.selectedToppingsListView);
         subtotalLabel = findViewById(R.id.subtotalLabel);
@@ -139,6 +140,15 @@ public class BuildYourOwnActivity extends AppCompatActivity {
             selectedToppingsAdapter.notifyDataSetChanged();
             updateSubtotal();
         }
+
+        // Display the topping image
+        displayToppingImage(topping);
+    }
+
+    private void displayToppingImage(Topping topping) {
+        String imageName = topping.toString().toLowerCase(); // Convert to lowercase
+        int imageResId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        toppingImageView.setImageResource(imageResId);
     }
 
     private void removeTopping() {
@@ -176,6 +186,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         selectedToppingsAdapter.notifyDataSetChanged();
         pizza = new BuildYourOwn();
         crustImageView.setImageResource(0);
+        toppingImageView.setImageResource(0);
         isSizeSelected = false;
         isCrustSelected = false;
         updateSubtotal();
