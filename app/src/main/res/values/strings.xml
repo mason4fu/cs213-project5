@@ -25,6 +25,11 @@
     <string name="tax_label">Tax: $%.2f</string>
     <string name="total_label">Total: $%.2f</string>
     <string name="total_orders_label">Total Orders: %d</string>
+    <string name="type_toppings">Choose a type of pizza to see its toppings</string>
+    <string name="pricing">The price of this pizza is: </string>
+    <string name="deluxe_info">The deluxe pizza has sausage, pepperoni, green pepper, onion, and mushroom</string>
+    <string name="meatzza_info">The meatzza has sausage, pepperoni, beef, and ham</string>
+    <string name="bbq_chicken_info">The BBQ chicken pizza has BBQ chicken, green pepper, provolone, and cheddar</string>
 
     <!-- Warnings -->
     <string name="warning_select_size">Please select a size before proceeding.</string>
@@ -45,7 +50,7 @@
     <string name="toast_order_completed">Order completed. Thank you!</string>
     <string name="toast_order_removed">Completed order removed.</string>
     <string name="toast_no_order_selected">No order selected to remove.</string>
-    <string name="pricing">The price of this pizza is: </string>
     <string name="error">This should not appear</string>
     <string name="ordered">Your pizza has been added to the order</string>
+
 </resources>

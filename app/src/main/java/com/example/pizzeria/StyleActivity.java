@@ -24,7 +24,7 @@ public class StyleActivity extends AppCompatActivity {
     /** Button corresponding to the addToOrder button on the xml*/
     private Button orderButton;
 
-    private TextView costText;
+    private TextView costText, toppingText;
 
     private ImageView imageView;
 
@@ -46,6 +46,7 @@ public class StyleActivity extends AppCompatActivity {
         this.orderButton = findViewById(R.id.addToOrder);
         this.costText = findViewById(R.id.costText);
         this.imageView = findViewById(R.id.imageView);
+        this.toppingText = findViewById(R.id.toppingsText);
 
         RadioGroup.OnCheckedChangeListener listener = (group, checkedId) -> fieldsFilled();
         styleGroup.setOnCheckedChangeListener(listener);
@@ -80,12 +81,12 @@ public class StyleActivity extends AppCompatActivity {
             Pizza pizza = makePizza();
             String cost = getString(R.string.pricing) + " $" + pizza.price();
             costText.setText(cost);
-            updateImages();
         } else {
             orderButton.setEnabled(false);
             costText.setText(R.string.finish_choosing_pizza_to_see_pricing);
-            updateImages();
         }
+        updateToppings();
+        updateImages();
     }
 
 /**
@@ -201,6 +202,19 @@ public class StyleActivity extends AppCompatActivity {
         return currentPizza;
     }
 
+    private void updateToppings() {
+        String type = ((RadioButton)findViewById(typeGroup.getCheckedRadioButtonId())).getText().toString();
+        if (type.equalsIgnoreCase(getString(R.string.deluxe))){
+            toppingText.setText(getString(R.string.deluxe_info));
+        } else if (type.equalsIgnoreCase(getString(R.string.bbq_chicken))) {
+            toppingText.setText(getString(R.string.bbq_chicken_info));
+        } else if (type.equalsIgnoreCase(getString(R.string.meatzza))) {
+            toppingText.setText(getString(R.string.meatzza_info));
+        }else {
+            toppingText.setText(getString(R.string.type_toppings));
+        }
+    }
+
     public void addToOrder(View view) {
         Order order = OrderSingleton.getInstance().getCurrentOrder();
         order.orderAdd(makePizza());
@@ -210,6 +224,7 @@ public class StyleActivity extends AppCompatActivity {
         fieldsFilled();
         Toast.makeText(this, getString(R.string.ordered), Toast.LENGTH_SHORT).show();
     }
+
 
     public void toMain(View view){
         Intent intent = new Intent(this, MainActivity.class);
