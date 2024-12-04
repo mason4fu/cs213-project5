@@ -3,18 +3,15 @@ package com.example.pizzeria;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 /**
- * Main entry point for the Pizzeria app.
- * Sets up the initial activity and GUI for the pizzeria.
+ * MainActivity: Activity that controls activity_main.xml.
+ * This is the main controller for the Pizzeria application.
+ * Handles navigation to different features of the app.
  *
- * @author YU FU
+ * @author YU
  * @author JOHNATHAN CHAN
  */
 public class MainActivity extends AppCompatActivity {
@@ -22,40 +19,38 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Set the layout for the activity
-        setContentView(R.layout.activity_main);
-
-        // Adjust for system bars (status bar and navigation bar)
-        /*
-        View rootView = findViewById(R.id.main);
-        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        */
-
-        //Toast.makeText(this, "onCreate()", Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.activity_main); // Load XML layout
     }
 
     /**
-     * A callback method executed right after onCreate().
+     * Navigates to the StyleActivity where the user can select pizza styles.
      */
-    protected void onStart() {
-        super.onStart();
-        //Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
+    public void openStyleActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, StyleActivity.class);
+        startActivity(intent);
     }
 
     /**
-     * A callback method executed right after onStart().
+     * Navigates to the BuildYourOwnActivity for customizing pizzas.
      */
-    protected void onResume() {
-        super.onResume();
-        //Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
+    public void openBuildYourOwnActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, BuildYourOwnActivity.class);
+        startActivity(intent);
     }
 
-    public void openStyle(View view){
-        Intent intent = new Intent(this, StyleActivity.class);
+    /**
+     * Navigates to the CheckoutActivity for reviewing and finalizing orders.
+     */
+    public void openCheckoutActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, CheckoutActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Navigates to the ViewOrdersActivity to manage and view store orders.
+     */
+    public void openViewOrdersActivity(View view) {
+        Intent intent = new Intent(MainActivity.this, OrdersActivity.class);
         startActivity(intent);
     }
 }

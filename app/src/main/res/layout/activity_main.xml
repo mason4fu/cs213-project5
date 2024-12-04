@@ -7,54 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Buttons Listed Vertically -->
+    <!-- Order Pizza Button -->
     <Button
         android:id="@+id/orderPizzaButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:onClick="openStyleActivity"
         android:text="@string/order_pizza"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textSize="14sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buildYourOwnButton"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:onClick="openStyle"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Build Your Own Button -->
     <Button
         android:id="@+id/buildYourOwnButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:onClick="openBuildYourOwnActivity"
         android:text="@string/build_your_own"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/orderPizzaButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintBottom_toTopOf="@id/checkoutButton" />
 
+    <!-- Checkout Button -->
     <Button
         android:id="@+id/checkoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:onClick="openCheckoutActivity"
         android:text="@string/checkout"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/buildYourOwnButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintBottom_toTopOf="@id/viewOrdersButton" />
 
+    <!-- Orders Management Button -->
     <Button
         android:id="@+id/viewOrdersButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:onClick="openViewOrdersActivity"
         android:text="@string/orders_management"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/checkoutButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

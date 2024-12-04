@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/sizeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/chicagoStyleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chicago Style" />
+
+        <Button
+            android:id="@+id/nyStyleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New York Style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toppingsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="256dp"
+            android:layout_weight="1" />
+
+        <ListView
+            android:id="@+id/selectedToppingsListView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/crustImageView"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/subtotalLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0.00"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/addToOrderButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add to Order" />
+
+        <Button
+            android:id="@+id/removeToppingButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remove Topping" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/returnToHomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return To Homepage" />
+</LinearLayout>

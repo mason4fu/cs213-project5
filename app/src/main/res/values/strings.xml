@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">pizzeria</string>
+    <string name="app_name">RU Pizzeria</string>
     <string name="order_pizza">Order Pizza</string>
     <string name="build_your_own">Build Your Own</string>
     <string name="checkout">Checkout</string>
@@ -19,4 +19,30 @@
     <string name="large">Large</string>
     <string name="finish_choosing_pizza_to_see_pricing">Finish choosing pizza to see pricing</string>
     <string name="add_to_order">Add to order</string>
+    <string name="select_size">Select Size</string>
+    <string name="subtotal_label">Subtotal: $%.2f</string>
+    <string name="ok">OK</string>
+    <string name="tax_label">Tax: $%.2f</string>
+    <string name="total_label">Total: $%.2f</string>
+    <string name="total_orders_label">Total Orders: %d</string>
+
+    <!-- Warnings -->
+    <string name="warning_select_size">Please select a size before proceeding.</string>
+    <string name="warning_select_size_first">Please select a size first.</string>
+    <string name="warning_select_style_first">Please select a style before adding toppings.</string>
+    <string name="warning_max_toppings">Maximum of 7 toppings allowed.</string>
+    <string name="warning_complete_selection">Please complete your selection of size and style before adding to order.</string>
+    <string name="warning_invalid_configuration">Invalid pizza configuration.</string>
+    <string name="error_no_items_to_complete">No items in the current order to complete.</string>
+
+    <!-- Success -->
+    <string name="success_title">Success</string>
+    <string name="success_message">Pizza added to order:\n%s</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_pizza_removed">Pizza removed from order.</string>
+    <string name="toast_no_pizza_selected">No pizza selected.</string>
+    <string name="toast_order_completed">Order completed. Thank you!</string>
+    <string name="toast_order_removed">Completed order removed.</string>
+    <string name="toast_no_order_selected">No order selected to remove.</string>
 </resources>

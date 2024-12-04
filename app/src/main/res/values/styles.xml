@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base Theme -->
+    <style name="Theme.Pizzeria" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/buttonColor</item>
+        <item name="android:windowBackground">@color/white</item> <!-- White background -->
+        <item name="colorPrimary">@color/buttonColor</item> <!-- Primary theme color -->
+        <item name="colorPrimaryVariant">@color/buttonColor</item> <!-- Variant for primary -->
+        <item name="colorOnPrimary">@color/white</item> <!-- Text on buttons -->
+        <item name="android:textColor">@color/black</item> <!-- Default text color -->
+        <item name="buttonStyle">@style/ButtonStyle</item> <!-- Apply custom button style -->
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

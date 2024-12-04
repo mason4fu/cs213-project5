@@ -12,18 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pizzeria"
         tools:targetApi="31">
-        <activity
-            android:name=".StyleActivity"
-            android:exported="false" />
+
+        <!-- Main Activity (Launcher) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Style Activity -->
+        <activity
+            android:name=".StyleActivity"
+            android:exported="false" />
+
+        <!-- Build Your Own Activity -->
+        <activity
+            android:name=".BuildYourOwnActivity"
+            android:exported="false" />
+
+        <!-- Checkout Activity -->
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false" />
+
+        <!-- Orders Activity -->
+        <activity
+            android:name=".OrdersActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

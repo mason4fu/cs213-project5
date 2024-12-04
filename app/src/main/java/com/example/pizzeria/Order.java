@@ -79,13 +79,4 @@ public class Order {
                 pizzas.toString(),
                 total);
     };
-
-    /**
-     * Returns a boolean representing whether there is anything on the order
-     *
-     * @return true if there are no pizzas on the order, false otherwise
-     */
-    public boolean isEmpty() {
-        return pizzas.isEmpty();
-    }
 }

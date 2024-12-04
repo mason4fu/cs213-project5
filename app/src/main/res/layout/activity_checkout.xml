@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ListView
+        android:id="@+id/pizzasListView"
+        android:layout_width="match_parent"
+        android:layout_height="451dp"
+        android:layout_marginBottom="16dp"
+        android:choiceMode="singleChoice" />
+
+    <TextView
+        android:id="@+id/subtotalLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0.00"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/taxLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tax: $0.00"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: $0.00"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/removePizzaButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remove"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Checkout" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/returnToHomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return To Homepage" />
+</LinearLayout>
