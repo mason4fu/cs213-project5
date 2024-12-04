@@ -159,19 +159,25 @@
         android:layout_marginStart="145dp"
         android:layout_marginEnd="138dp"
         android:contentDescription="@string/preview_pizza"
-        app:layout_constraintTop_toBottomOf="@+id/costText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costText"
+        app:layout_constraintVertical_bias="0.109"
+        android:src="@drawable/pizza"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
 
     <Button
         android:id="@+id/addToOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_to_order"
+        android:onClick="addToOrder"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:enabled="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,4 +45,7 @@
     <string name="toast_order_completed">Order completed. Thank you!</string>
     <string name="toast_order_removed">Completed order removed.</string>
     <string name="toast_no_order_selected">No order selected to remove.</string>
+    <string name="pricing">The price of this pizza is: </string>
+    <string name="error">This should not appear</string>
+    <string name="ordered">Your pizza has been added to the order</string>
 </resources>
