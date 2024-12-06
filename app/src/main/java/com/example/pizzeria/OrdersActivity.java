@@ -15,6 +15,8 @@ import java.util.List;
 /**
  * Activity for managing orders in the Pizzeria application.
  * Handles the current order logic and manages completed orders.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class OrdersActivity extends AppCompatActivity {
 

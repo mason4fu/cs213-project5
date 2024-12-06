@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * Singleton class to manage orders across the application.
  * Uses the Order class for managing current and completed orders.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class OrderSingleton {
 

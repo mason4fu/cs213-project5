@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Represents a pizza object, containing info on types of toppings, crust, and size.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public abstract class Pizza {
 

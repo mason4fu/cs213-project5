@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * Represents a custom pizza with a specified crust, size, and toppings.
  * Allows dynamic price calculation based on size and number of toppings.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class BuildYourOwn extends Pizza {
     private static final double TOPPING_COST = 1.69;

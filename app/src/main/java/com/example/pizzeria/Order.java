@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Represents the pizza orders
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class Order {
 

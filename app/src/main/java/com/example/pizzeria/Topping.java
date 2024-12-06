@@ -2,6 +2,8 @@ package com.example.pizzeria;
 
 /**
  * Represents the possible toppings for the pizza
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public enum Topping {
     /** The pizza has sausage as a topping */

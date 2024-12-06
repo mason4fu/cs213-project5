@@ -17,6 +17,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * Activity for choosing non custom pizzas to add to the order.
+ *
+ * @author YU FU, JOHNATHAN CHAN
+ */
+
 public class StyleActivity extends AppCompatActivity {
 
     /** Radio groups corresponding to those in the xml */
@@ -25,8 +31,10 @@ public class StyleActivity extends AppCompatActivity {
     /** Button corresponding to the addToOrder button on the xml*/
     private Button orderButton;
 
+    /** Text areas giving information about the pizza chosen*/
     private TextView costText, toppingText;
 
+    /** Image area to show a preview of the pizza the user plans to order*/
     private ImageView imageView;
 
     @Override
@@ -124,7 +132,6 @@ public class StyleActivity extends AppCompatActivity {
 /**
  * Set images based on type.
  */
-
     private void typeImageSetter(){
         String type = ((RadioButton)findViewById(typeGroup.getCheckedRadioButtonId())).getText().toString();
         if (type.equalsIgnoreCase(getString(R.string.deluxe))){
@@ -165,6 +172,11 @@ public class StyleActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Creates a pizza object depending on what the user chooses
+     *
+     * @return pizza with the chosen parameters from the UI
+     */
     private Pizza makePizza(){
         PizzaFactory pizzaFactory;
         Pizza currentPizza = null;
@@ -203,6 +215,9 @@ public class StyleActivity extends AppCompatActivity {
         return currentPizza;
     }
 
+    /**
+     * Updates the text that tells what toppings are on the selected type of pizza
+     */
     private void updateToppings() {
         if(typeGroup.getCheckedRadioButtonId() == -1){
             return;
@@ -219,6 +234,11 @@ public class StyleActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Adds the pizza with the user's specified parameters to the order
+     *
+     * @param view is unused in the method, but is required for the signature
+     */
     public void addToOrder(View view) {
         Order order = OrderSingleton.getInstance().getCurrentOrder();
         order.orderAdd(makePizza());
@@ -230,7 +250,11 @@ public class StyleActivity extends AppCompatActivity {
         Toast.makeText(this, getString(R.string.ordered), Toast.LENGTH_SHORT).show();
     }
 
-
+    /**
+     * Opens the main activity, where the user can then navigate else where
+     *
+     * @param view is unused in the method, but is required for the signature
+     */
     public void toMain(View view){
         Log.d("ActivityNavigation", "toMain triggered by: " + view.getId());
         Intent intent = new Intent(this, MainActivity.class);

@@ -20,6 +20,8 @@ import java.util.List;
 /**
  * Activity for the "Build Your Own Pizza" screen.
  * Enforces user actions in sequence and handles warnings.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class BuildYourOwnActivity extends AppCompatActivity {
 

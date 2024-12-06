@@ -2,6 +2,8 @@ package com.example.pizzeria;
 
 /**
  * Represents the possible types of crust for the pizza
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public enum Crust {
     /** Pizza has a deep dish type crust*/

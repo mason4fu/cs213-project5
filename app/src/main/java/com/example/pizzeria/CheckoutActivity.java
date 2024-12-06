@@ -15,6 +15,8 @@ import java.util.List;
 /**
  * Activity for the Checkout screen.
  * Manages the display of pizzas in the current order and calculates totals with tax.
+ *
+ * @author YU FU, JOHNATHAN CHAN
  */
 public class CheckoutActivity extends AppCompatActivity {
 
