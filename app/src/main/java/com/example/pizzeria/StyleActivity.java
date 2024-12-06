@@ -2,6 +2,7 @@ package com.example.pizzeria;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -203,6 +204,9 @@ public class StyleActivity extends AppCompatActivity {
     }
 
     private void updateToppings() {
+        if(typeGroup.getCheckedRadioButtonId() == -1){
+            return;
+        }
         String type = ((RadioButton)findViewById(typeGroup.getCheckedRadioButtonId())).getText().toString();
         if (type.equalsIgnoreCase(getString(R.string.deluxe))){
             toppingText.setText(getString(R.string.deluxe_info));
@@ -227,6 +231,7 @@ public class StyleActivity extends AppCompatActivity {
 
 
     public void toMain(View view){
+        Log.d("ActivityNavigation", "toMain triggered by: " + view.getId());
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
