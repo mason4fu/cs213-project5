@@ -225,6 +225,7 @@ public class StyleActivity extends AppCompatActivity {
         styleGroup.clearCheck();
         typeGroup.clearCheck();
         sizeGroup.clearCheck();
+        toppingText.setText(getString(R.string.type_toppings));
         fieldsFilled();
         Toast.makeText(this, getString(R.string.ordered), Toast.LENGTH_SHORT).show();
     }
